@@ -4,7 +4,7 @@
   "details": {
     "intro": {
       "text": "intro.md",
-      "code": "initial-setup.sh"
+      "code": "/root/initial-setup.sh"
     },
     "steps": [
       {
