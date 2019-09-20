@@ -23,6 +23,13 @@
     "imageid": "minikube-running"
   },
   "assets": {
+    "host01": [
+      {
+        "file": "initial-setup.sh",
+        "target": "/root/initial-setup.sh",
+        "chmod": "+x"
+      }
+    ],
     "client": [
       {
         "file": "initial-setup.sh",
