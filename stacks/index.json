@@ -8,8 +8,12 @@
     },
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Install Prerequisites",
         "text": "step1.md"
+      },
+      {
+        "title": "Hello World",
+        "text": "step2.md"
       }
     ],
     "finish": {
