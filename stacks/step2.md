@@ -42,7 +42,7 @@ local builds that you'll want to do when developing (it's the
 Now we'll install the Stack that we built into our local Crossplane
 control cluster:
 
-`kubectl crossplane stack install --cluster 'crossplane-examples/hello-world' 'crossplane-examples-hello-world' localhost:5000`
+`kubectl crossplane stack install --cluster 'crossplane-examples/hello-world' 'crossplane-examples-hello-world' localhost:5000`{{execute}}
 
 Our Stack watches for helloworld objects, so to test the Stack, we
 should create a helloworld object:
