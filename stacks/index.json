@@ -2,15 +2,16 @@
   "title": "Crossplane Stacks",
   "description": "Learn how to create your first Stack",
   "details": {
+    "intro": {
+      "text": "intro.md",
+      "code": "initial-setup.sh"
+    },
     "steps": [
       {
         "title": "Step 1",
         "text": "step1.md"
       }
     ],
-    "intro": {
-      "text": "intro.md"
-    },
     "finish": {
       "text": "finish.md"
     }
@@ -20,5 +21,14 @@
   },
   "backend": {
     "imageid": "minikube-running"
+  },
+  "assets": {
+    "client": [
+      {
+        "file": "initial-setup.sh",
+        "target": "/root/initial-setup.sh",
+        "chmod": "+x"
+      }
+    ]
   }
 }
