@@ -3,13 +3,6 @@
 # Install Crossplane CLI
 RELEASE=release-0.1 && curl -sL https://raw.githubusercontent.com/crossplaneio/crossplane-cli/"${RELEASE}"/bootstrap.sh | RELEASE=${RELEASE} bash
 
-# Finish setting up helm
-helm init
-
-# Install Crossplane
-helm repo add crossplane-alpha https://charts.crossplane.io/alpha
-helm install --name crossplane --namespace crossplane-system crossplane-alpha/crossplane
-
 # Initialize the environment
 
 # Install go
@@ -42,3 +35,16 @@ git init
 
 # Initialize project with kubebuilder
 GO111MODULE=on kubebuilder init --domain helloworld.stacks.crossplane.io
+
+# Set up Crossplane
+# The reason this happens later in the script than what would normally happen is because
+# when the environment first spins up, the kubernetes cluster is not ready yet. The steps
+# before this take some time, so by the time we get to here, the cluster should be
+# spun up and ready to install Crossplane.
+#
+# Finish setting up helm
+helm init
+
+# Install Crossplane
+helm repo add crossplane-alpha https://charts.crossplane.io/alpha
+helm install --name crossplane --namespace crossplane-system crossplane-alpha/crossplane
