@@ -45,6 +45,5 @@ GO111MODULE=on kubebuilder init --domain helloworld.stacks.crossplane.io
 # Finish setting up helm
 helm init
 
-# Install Crossplane
+# Install Crossplane Setup
 helm repo add crossplane-alpha https://charts.crossplane.io/alpha
-helm install --name crossplane --namespace crossplane-system crossplane-alpha/crossplane

@@ -9,5 +9,4 @@ it's done, we can finish setting up our environment.
 
 We'll need to install Crossplane before we're able to use it:
 
-`helm repo add crossplane-alpha https://charts.crossplane.io/alpha`{{execute}}
 `helm install --name crossplane --namespace crossplane-system crossplane-alpha/crossplane`{{execute}}
